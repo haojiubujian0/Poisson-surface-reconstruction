@@ -1,6 +1,6 @@
 # 简介
 
- ![](https://img.shields.io/badge/license-MIT-blue)![](https://img.shields.io/badge/泊松表面重建-V1.0-yellowgreen)
+ ![](https://img.shields.io/badge/license-MIT-blue) ![](https://img.shields.io/badge/泊松表面重建-V1.0-yellowgreen)
 
 该项目旨在复现Michael Kazhdan等人于**2006**年提出的**泊松表面重建算法**（Poisson Surface Reconstruction）。关于算法的详细介绍请参见原论文☞[SGP06.pdf (jhu.edu)](https://www.cs.jhu.edu/~misha/MyPapers/SGP06.pdf)。
 
