@@ -69,7 +69,7 @@ namespace poisson_reconstruction {
 		// set 12 nodes of 27
 		// Find 12 cube nodes adjacent to cnode's 3 faces
 		// this 3 faces are: e.g  0 -> face 0, 2, 4;  ..., 5 -> face 1, 2, 5, ...  
-		for (uint8_t dir = 0; dir < 2; ++dir) {
+		for (uint8_t dir = 0; dir < 3; ++dir) {
 			temp = parent_magic_cube(center + search_matrix[number][dir]);
 			if (temp != nullptr) {
 				// when needed
@@ -110,7 +110,7 @@ namespace poisson_reconstruction {
 		Position<int8_t> edge_adjacent_node_pos;
 		// set 6 nodes of 27 in total
 		// Find 6 cube nodes adjacent to cnode's 3 edges
-		for (uint8_t dir = 0; dir < 2; ++dir) {
+		for (uint8_t dir = 0; dir < 3; ++dir) {
 			temp = parent_magic_cube(center + search_matrix[number][dir + 3]);
 			if (temp != nullptr) {
 				if (temp->children == nullptr) temp->init_eight_children();
