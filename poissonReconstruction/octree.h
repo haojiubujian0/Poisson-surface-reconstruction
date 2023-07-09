@@ -607,8 +607,7 @@ namespace poisson_reconstruction {
 			}
 
 			// Here the weight alpha is set using the n-degree convolution of the box function to simulate Gaussian function
-			Symmetric_poly<N-1, T> gaussian_appro = Gaussian_approximation<N, T>(0.5);
-			gaussian_appro.scale(curr_width);
+			Symmetric_poly<N-1, T> gaussian_appro = Gaussian_approximation<N, T>(0.5).scale(curr_width);
 
 			// Build a Rubik's Cube structure centered on curr_node
 			Magic_cube curr_node_magic;
@@ -1191,7 +1190,7 @@ namespace poisson_reconstruction {
 		bool divide = false;
 
 		// Check if the node has edges with more than one root
-		// ¼ì²é±ßiÓëµÈÖµÃæµÄÏà½»µãÊı, ÈôÏà½»ÊıÄ¿´óÓÚ1£¬½«subÉèÖÃÎª1
+		// æ£€æŸ¥è¾¹iä¸ç­‰å€¼é¢çš„ç›¸äº¤ç‚¹æ•°, è‹¥ç›¸äº¤æ•°ç›®å¤§äº1ï¼Œå°†subè®¾ç½®ä¸º1
 		for (uint8_t edge = 0; edge < 12 && !divide; ++edge) {
 			if (edge_root_count(curr_node, edge, isovalue) > 1) {
 				divide = true;
